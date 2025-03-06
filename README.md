@@ -84,7 +84,8 @@ source venv/bin/activate  # (Linux/macOS)
 venv\Scripts\activate     # (Windows)
 pip install -r requirements.txt
 cd backend
-python manage.py migrate
+python manage.py makemigrations api
+python manage.py migrate api
 python manage.py createsuperuser  # Criar um usuário administrador
 python manage.py runserver
 ```
@@ -107,6 +108,8 @@ npm install
 
 # Se necessário, instale as dependências do React Router DOM, Axios e Material-UI
 npm install axios react-router-dom @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+
 
 npm start
 ```
